@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap');
+
+:root {
+    font-size: 24px;
+    --v-line-placement: 10vw;
+    --v-line-width: 2px;
+    --v-line-color: rgba(255, 0, 0, 0.24);
+    --margin-left: calc(var(--v-line-placement) + (var(--v-line-placement) / 1.618));
+    --margin-right: calc(var(--margin-left) + (var(--v-line-placement) / 1.618) + 0.5rem);
+}
+body {
+    font-family: 'Sue Ellen Francisco', cursive;
+    background-color: #fff9e8;
+}
+h1 {
+    text-align: center;
+    margin: 1em 0 0 0;
+}
+h3 {
+    padding-left: 0.5rem;
+}
+#header {
+    height: fit-content;
+}
+#vertical-line {
+    position: fixed;
+    left: var(--v-line-placement);
+    z-index: -1;
+}
+#v-line-1 {
+    display: inline-block;
+    width: var(--v-line-width);
+    height: 100vh;
+    background-color: var(--v-line-color);
+}
+#v-line-2 {
+    display: inline-block;
+    width: var(--v-line-width);
+    height: 100vh;
+    background-color: var(--v-line-color);
+    position: relative;
+    left: var(--v-line-width);
+}
+#content {
+    display: inline-block;
+    height: 100vh;
+}
+.left-margin {
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+    width: calc(100% - var(--margin-right));
+}
+.underline {
+    border-bottom: 2px solid #0050a51e;
+    width: 100vw;
+    height: 50px;
+    display: block;
+}
+.input-group-sm>.form-control:not(#textField-chore0) {
+    padding-left: 40px;
+}
+.input-group-sm>.form-control {
+    font-size: 1.3em;
+    border: 0;
+    background-color: #FFFFFF00;
+    height: fit-content;
+}
+.form-control:focus {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(255, 0, 0, 0);
+}
+.input-group-text {
+    border: 0;
+    background-color: #FFFFFF00;
+}
+.input-group-append {
+    height: 48px;
+}
+@keyframes errorMessage {
+    from    {background-color: #dc354530;
+            /* text-decoration: underline; */
+    }
+    to      {background-color: rgba(255, 0, 0, 0);
+            /* text-decoration: none; */
+    }
+}

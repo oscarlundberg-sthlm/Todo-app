@@ -1,0 +1,37 @@
+1. SKAPA HTML-BAS
+    lägg till textfält och knapp
+nästa rad
+    skapa en div för "att göra"
+    rubrik "Att göra"
+    stäng div
+nästa rad
+    skapa div för "färdiga"
+    rubrik "Färdiga"
+    stäng div
+html - done
+
+2. JAVASCRIPT
+Övergripande tillvägagångssätt:
+    När man klickar "Lägg till", skapas ett nytt div-element
+    det nya div-elementet innehåller 
+        - en punkt
+        - textfält som inte går att redigera
+        - knapp "ändra"(obs! "spara", kommer senare)
+            vid klick, funktion - om textfält oredigerbart, gör redigerbart och ändra text på knapp till "spara"
+                                 om textfält redigerbart, gör oredigerbart och ändra text på knapp till "ändra"
+        - knapp "färdig"
+            klick, funktion - appenda parent-div till färdiga-diven och ta bort "färdig"-knappen
+        - knapp "radera"
+            remove parent-divven
+    
+        appenda value från "lägg till"-textfield till detta textfält.
+
+CLASS & METHOD
+    för de 3 knapparna ändra, färdig, radera
+
+    alla knappar har   
+    - createelement "input"
+    - type button
+    - class ${thisChore} btn (+ individuella klasser)
+    - id (individuellt)
+    - value (individuellt)
